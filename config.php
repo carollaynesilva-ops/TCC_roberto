@@ -1,8 +1,16 @@
 <?php
-$conn = new mysqli("localhost","root","3307","almafisio");
 
-if($conn->connect_error){
-    die("Erro: " . $conn->connect_error);
+$host = "localhost";
+$user = "root";
+$pass = "";
+$db   = "almafisio";
+$port = 3307;
+
+$conn = new mysqli($host, $user, $pass, $db, $port);
+
+if ($conn->connect_error) {
+    die("Erro de conexão: " . $conn->connect_error);
 }
+
 session_start();
 ?>
